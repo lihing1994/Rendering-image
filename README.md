@@ -20,3 +20,6 @@
 ## Copy all the source code to your project.
 - After generating the poject, you may go to the privious folder. Then, go to the folder, which is named **apps**. Then, open the folder called **myApps**. Then, find the project you just generated. 
 ![Screen Shot 2021-01-25 at 11 56 41 PM](https://user-images.githubusercontent.com/25276186/105816664-6f649680-5f69-11eb-9a9c-5594f2c043b8.png)
+
+- Open the folder that contain all the files of your projct. Then, you may download **src** and **bin** folders that has been attached in this GitHub page. Then **copy** and **replace** **src**, **bin** folder 
+![Screen Shot 2021-01-26 at 12 03 17 AM](https://user-images.githubusercontent.com/25276186/105817127-0f222480-5f6a-11eb-96d8-4d3ddfadc1c9.png)
