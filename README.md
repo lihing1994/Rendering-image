@@ -1,7 +1,7 @@
 # Introduction
  - The project focus on creating a 3D enivernment and rendering an image based on the enivernment we just defined using Ray-Tracing algorthim. To make the image looks more realistic, the following shading technique and lighting effects have been implemented including, Phong shading, Lambert shading, Point-light, Spot-light, Area-light, and mirror reflection effect. The project is implemented by OpenFrameWork, which is a C++ toolkit. In order to run this project, you may download the OpenFrameWork toolkit by cliking following link:  [Link To Download OpenFrameWork](https://openframeworks.cc/download/)
 
-## Creating an OpenFrameWork Project (You may skip this steps if you are familiar with OpenFrameWork).
+## Creating an OpenFrameWork Project on your computer(You may skip this steps if you are familiar with OpenFrameWork).
 - After you downloaded the OpenFrameWork to your computer, you may unzip the zip file you just downloaded. Then, in the same directory, you may find a folder that containes all the necessarily files for the OpenFrameWork (e.g The name of the folder should appear as the following formate : of_XXXXXXXXX_XXX_release). 
 ![Screen Shot 2021-01-25 at 11 19 10 PM](https://user-images.githubusercontent.com/25276186/105812874-cd8e7b00-5f63-11eb-825e-b75305c4ca86.png)
 
@@ -13,3 +13,6 @@
 
 - If it is your first time to run **projectGenerator** file, you may have **runMeFirst.command** file first. First Select the **runMeFirst.command** the file. Then, right clik the file and run the file in Terminal. 
 ![Screen Shot 2021-01-25 at 11 29 50 PM](https://user-images.githubusercontent.com/25276186/105814400-37a81f80-5f66-11eb-8953-84c9acbc0a41.png)
+
+- Open the projectGenerator. Then, you may name the project with anyname you want. Then, in the addons area, you may have to add **ofxassimpmodelloader** and **ofxgui** addons to your project in order to run all source codes of this project. Finally, creating the project by cliking the **Generate** button. 
+![Screen Shot 2021-01-25 at 11 40 45 PM](https://user-images.githubusercontent.com/25276186/105814820-cd43af00-5f66-11eb-9e99-7880e934ea31.png)
