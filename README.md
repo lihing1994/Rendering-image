@@ -11,5 +11,5 @@
 - Open the folder, than you may find a file called **projectGenerator**.
 ![Screen Shot 2021-01-25 at 11 27 58 PM](https://user-images.githubusercontent.com/25276186/105813686-0f6bf100-5f65-11eb-8fc0-7d06c9c6a501.png)
 
-- If it is your first time to run **projectGenerator** file, you may have **runMeFirst.command** file first. First Select the **runMeFirst.command** by right click the file. Then, open and run the file in Terminal. 
+- If it is your first time to run **projectGenerator** file, you may have **runMeFirst.command** file first. First Select the **runMeFirst.command** the file. Then, right clik the file and run the file in Terminal. 
 ![Screen Shot 2021-01-25 at 11 29 50 PM](https://user-images.githubusercontent.com/25276186/105814400-37a81f80-5f66-11eb-8953-84c9acbc0a41.png)
