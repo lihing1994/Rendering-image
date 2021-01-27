@@ -21,6 +21,6 @@
 - After generating the poject, you may go to the privious folder. Then, go to the folder, which is named **apps**. Then, open the folder called **myApps**. Then, find the project you just generated. 
 ![Screen Shot 2021-01-25 at 11 56 41 PM](https://user-images.githubusercontent.com/25276186/105816664-6f649680-5f69-11eb-9a9c-5594f2c043b8.png)
 
-- Then, you may download **src** and **bin** folders from this GitHub page. Then **copy** and **replace** both of the folders you just downloaded into your project's folder.
+- Then, you may download **src** and **bin** folders from this GitHub page. Then **copy** and **replace** both of the folders that you just downloaded into your project's folder.
 ![Screen Shot 2021-01-26 at 12 03 17 AM](https://user-images.githubusercontent.com/25276186/105817127-0f222480-5f6a-11eb-96d8-4d3ddfadc1c9.png)
 ![Screen Shot 2021-01-26 at 1 40 00 AM](https://user-images.githubusercontent.com/25276186/105828113-9d50d780-5f77-11eb-8435-05d218a7e11e.png)
