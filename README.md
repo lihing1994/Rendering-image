@@ -33,3 +33,7 @@
 - Finally, add all the **.cpp and .h** files exclude **ofApp.cpp, ofApp.h, and main.cpp** to your project. 
 ![Screen Shot 2021-01-26 at 9 45 57 PM](https://user-images.githubusercontent.com/25276186/105948532-f1af9200-601f-11eb-8953-c89ea8d293cf.png)
 
+# Source code explaination
+- Now if you compile and run the project, you will have Window as the following picture. 
+![Screen Shot 2021-01-26 at 9 54 37 PM](https://user-images.githubusercontent.com/25276186/105949191-2708af80-6021-11eb-885f-dc7d3dc4e1cf.png)
+
