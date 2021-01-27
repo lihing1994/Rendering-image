@@ -21,6 +21,15 @@
 - After generating the poject, you may go to the privious folder. Then, go to the folder, which is named **apps**. Then, open the folder called **myApps**. Then, find the project you just generated. 
 ![Screen Shot 2021-01-25 at 11 56 41 PM](https://user-images.githubusercontent.com/25276186/105816664-6f649680-5f69-11eb-9a9c-5594f2c043b8.png)
 
-- Then, you may download **src** and **bin** folders from this GitHub page. Then **copy** and **replace** both of the folders that you just downloaded into your project's folder.
+- Then, you may download **src** and **bin** folders from this GitHub page. Then **copy** and **replace** both of the folders that you just downloaded into your project's directory.
 ![Screen Shot 2021-01-26 at 12 03 17 AM](https://user-images.githubusercontent.com/25276186/105817127-0f222480-5f6a-11eb-96d8-4d3ddfadc1c9.png)
 ![Screen Shot 2021-01-26 at 1 40 00 AM](https://user-images.githubusercontent.com/25276186/105828113-9d50d780-5f77-11eb-8435-05d218a7e11e.png)
+
+## Copy the reference of source code to your IDE
+- Now open your project using Xcode. 
+![Screen Shot 2021-01-26 at 9 15 52 PM](https://user-images.githubusercontent.com/25276186/105946237-bad77d00-601b-11eb-85b3-3d73ccf19ca5.png)
+- You may select the **src** folder from the left side bar area. Then, right click the folder and select **Add Files to ..**
+![Screen Shot 2021-01-26 at 9 26 23 PM](https://user-images.githubusercontent.com/25276186/105947042-3c7bda80-601d-11eb-861e-b20d20cb4575.png)
+- Finally, add all the **.cpp and .h** files exclude **ofApp.cpp, ofApp.h, and main.cpp** to your project. 
+![Screen Shot 2021-01-26 at 9 45 57 PM](https://user-images.githubusercontent.com/25276186/105948532-f1af9200-601f-11eb-8953-c89ea8d293cf.png)
+
