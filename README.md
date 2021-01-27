@@ -33,7 +33,7 @@
 - Finally, add all the **.cpp and .h** files exclude **ofApp.cpp, ofApp.h, and main.cpp** to your project. 
 ![Screen Shot 2021-01-26 at 9 45 57 PM](https://user-images.githubusercontent.com/25276186/105948532-f1af9200-601f-11eb-8953-c89ea8d293cf.png)
 
-# Source code explaination
+# View objects explaination
 - Now if you compile and run the project, you will have a Window as the following picture. First, all the small spheres in **yellow** and **black** color are representing the **point light**, which emits light ray in 360 degree. Then, the two small spheres in **yellow** and **white** color with arrows are representing the spot-light. The two panels in **yellow** and **blue** colors with many arrows are representing the area-light. The three big spheres in **blue**,**yellow**,and **red** colors are defined as the **sceneObject**. The rabbit, which is sitting on the **yellow** sphere is a Mesh object. Finally, the wall panels and the table panels are defined as **plane** object, which is inherited from the **SceneObject**.
 ![Screen Shot 2021-01-26 at 9 56 25 PM](https://user-images.githubusercontent.com/25276186/105949349-63d4a680-6021-11eb-853f-d062f4cca61f.png)
 
