@@ -85,3 +85,5 @@ The first parameter of **MeshObj** object: the position for obj file.<br />
 The second parameter of **MeshObj** object : the pointer to **ofxAssimpModelLoader**, which is used to load obj file.<br /> 
 The thrid parameter(optional) **MeshObj** object: the diffuse color for each **Triangle Mesh** in the **obj** file.<br />
 The fourth parameter(optional) **MeshObj** object: the special color for each **Triangle Mesh** in the **obj** file.<br />
+![Screen Shot 2021-01-28 at 4 32 07 AM](https://user-images.githubusercontent.com/25276186/106139093-d6c54680-6121-11eb-85f8-fb31f077b303.png)
+<br /><br />
