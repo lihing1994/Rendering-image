@@ -38,7 +38,7 @@
 ![Screen Shot 2021-01-26 at 9 56 25 PM](https://user-images.githubusercontent.com/25276186/105949349-63d4a680-6021-11eb-853f-d062f4cca61f.png)
 
 # Adding renderable scene object into the RayTracingSystem 
--  In **ofApp.cpp** file, you may add floor plane/wall plane to Systen using following code
+-  In **ofApp.cpp** file, you may add floor plane/wall plane to Systen. The following code is an example to add Plane object to RayTracingSystem.
 ```
 this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,-2,0),glm::vec3(0,1,0),ofColor::lightCyan,40,40, nullptr,true));
 ```
