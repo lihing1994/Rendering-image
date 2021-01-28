@@ -15,8 +15,8 @@ void ofApp::setup(){
     this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-4,2,0),3.0f,ofColor::blue));
     this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(0,3,2),3.0f,ofColor::yellow));
     this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(3,2,-2),3.0f,ofColor::red));
-    //Adding Mesh obj
     
+    //Adding Mesh obj
     this->_obj_file = new ofxAssimpModelLoader();
     if(_obj_file->loadModel("Rabbit_Lowpoly_1.obj"))
     {
