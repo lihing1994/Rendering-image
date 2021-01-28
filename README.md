@@ -38,9 +38,11 @@
 ![Screen Shot 2021-01-26 at 9 56 25 PM](https://user-images.githubusercontent.com/25276186/105949349-63d4a680-6021-11eb-853f-d062f4cca61f.png)
 
 # Adding renderable scene object into the RayTracingSystem 
--  In **ofApp.cpp** file, you may add floor plane/wall plane to Systen. The following code is an example to add Plane object to RayTracingSystem.
+-  In **ofApp.cpp** file, you may add floor plane/wall plane to Systen. The following code are an examples to add **Plane** object to **RayTracingSystem**.
 ```
-this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,-2,0),glm::vec3(0,1,0),ofColor::lightCyan,40,40, nullptr,true));
+this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,-2,0),glm::vec3(0,1,0),ofColor::lightCyan,40,40, nullptr,true)); // A mirror reflectable Plane with not texture.
+this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,18,-20),glm::vec3(0,0,1),ofColor::skyBlue,40,40, new ofImage("wallPlaneTexter.jpeg"))); //A plane with texture but no mirror reflectable.
+this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,18,-20),glm::vec3(0,0,1),ofColor::skyBlue,40,40))); // A plane with no texture and is no mirror reflectbale. 
 ```
 The First parameter : position of the plane.<br />
 The second parameter : normal vector of the plane.<br /> 
@@ -48,6 +50,20 @@ The thrid parameter(optional) : the color of the plane.<br />
 The fourth parameter(optional) : the width of the plane.<br />
 The fifth parameter(optional): the length of the plane.<br />
 The sixth parameter(optional): the pointer to ofImage object.<br />
-The last parameter(optional): a boolean stands if a plane is mirror reflectable or not.<br />
+The last parameter(optional): a boolean value stands if the plane is mirror reflectable or not.<br />
 
-**Note: if you don't pass value to a optional parameter, the constructor of the **Plane** object will provide it.**
+**Note: if you don't pass value to a optional parameter, the constructor of the **Plane** object will provide default value for it.**
+![Screen Shot 2021-01-28 at 2 38 39 AM](https://user-images.githubusercontent.com/25276186/106126946-e38e6e00-6112-11eb-9cc1-5b23eae9f666.png)
+
+- In **ofApp.cpp** file, you may add **sphere** to Systen. The following code is an example to add **sphere** object to **RayTracingSystem**.
+```
+this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-4,2,0),3.0f,ofColor::blue)); // A sphere.
+this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-6,2,0),3.0f)); // A sphere with default color.
+this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-6,2,0),3.0f,ofColor::white,true)); // A mirror reflectable sphere.
+```
+The First parameter : position of the sphere.<br />
+The second parameter : the raduis of the sphere.<br /> 
+The thrid parameter(optional) : the color of the sphere.<br />
+The fourth parameter(optional) : a boolean value stands if the sphere is mirror reflectable or not.<br />
+**Note: if you don't pass value to a optional parameter, the constructor of the **Sphere** object will provide default value for it.**
+![Screen Shot 2021-01-28 at 3 13 43 AM](https://user-images.githubusercontent.com/25276186/106131210-3ff38c80-6117-11eb-93a5-500ae8b16f52.png)
