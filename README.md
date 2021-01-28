@@ -36,7 +36,7 @@
 
 
 # Adding renderable scene object into the RayTracingSystem 
--  In **ofApp.cpp** file, you may add **floor plane/wall plane** object to the Systen. The following code are an examples to add **Plane** object to **RayTracingSystem**. 
+-  In **ofApp.cpp** file, you may add **floor plane/wall plane** object to the System. The following code are an examples to add **Plane** object to **RayTracingSystem**. 
 ```
 this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,-2,0),glm::vec3(0,1,0),ofColor::lightCyan,40,40, nullptr,true)); // A mirror reflectable Plane with not texture.
 this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,18,-20),glm::vec3(0,0,1),ofColor::skyBlue,40,40, new ofImage("wallPlaneTexter.jpeg"))); //A plane with texture but no mirror reflectable.
@@ -53,7 +53,7 @@ The last parameter(optional): a boolean value stands if the plane is mirror refl
 **Note: if you don't pass value to a optional parameter, the constructor of the **Plane** object will provide default value for it.**
 ![Screen Shot 2021-01-28 at 2 38 39 AM](https://user-images.githubusercontent.com/25276186/106126946-e38e6e00-6112-11eb-9cc1-5b23eae9f666.png)<br /> <br />
 
-- In **ofApp.cpp** file, you may add **sphere** to Systen. The following code is an example to add **sphere** object to **RayTracingSystem**.
+- In **ofApp.cpp** file, you may add **sphere** to System. The following code is an example to add **sphere** object to **RayTracingSystem**.
 ```
 this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-4,2,0),3.0f,ofColor::blue)); // A sphere.
 this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-6,2,0),3.0f)); // A sphere with default color.
@@ -64,4 +64,24 @@ The second parameter : the raduis of the sphere.<br />
 The thrid parameter(optional) : the color of the sphere.<br />
 The fourth parameter(optional) : a boolean value stands if the sphere is mirror reflectable or not.<br />
 **Note: if you don't pass value to a optional parameter, the constructor of the **Sphere** object will provide default value for it.**
-![Screen Shot 2021-01-28 at 3 13 43 AM](https://user-images.githubusercontent.com/25276186/106131210-3ff38c80-6117-11eb-93a5-500ae8b16f52.png)
+![Screen Shot 2021-01-28 at 3 13 43 AM](https://user-images.githubusercontent.com/25276186/106131210-3ff38c80-6117-11eb-93a5-500ae8b16f52.png)<br /><br />
+
+- In **ofApp.cpp** file, you may add **MeshObj** object by importing information from an **obj** file, which is a geometry definition file format. To render image perfectly, the **obj** file should only contains information of **Triangle Mesh**. The following link is showing you how to convert **Polygon** faces to **Triangle** Mesh using AutoDesk Maya.<br />
+[Convert Polygon faces to Triangle Mesh](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-Modeling/files/GUID-46439E7A-3FD0-460B-93FC-23917179D101-htm.html)<br /><br />
+ The following code is an example to add **MeshObj** object to **RayTracingSystem**.
+```
+this->_obj_file = new ofxAssimpModelLoader();
+if(_obj_file->loadModel("Rabbit_Lowpoly_1.obj"))
+{
+    this->_ray_tracing_system->addSceneObject(new MeshObj(glm::vec3(0, 6, 2), _obj_file, ofColor::saddleBrown, ofColor::gray));
+}
+else
+{
+    std::cout<<"Can't not load the obj file"<<std::endl;
+    return;
+}
+```
+The first parameter of **MeshObj** object: the position for obj file.<br />
+The second parameter of **MeshObj** object : the pointer to **ofxAssimpModelLoader**, which is used to load obj file.<br /> 
+The thrid parameter(optional) **MeshObj** object: the diffuse color for each **Triangle Mesh** in the **obj** file.<br />
+The fourth parameter(optional) **MeshObj** object: the special color for each **Triangle Mesh** in the **obj** file.<br />
