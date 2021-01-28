@@ -37,3 +37,17 @@
 - Now if you compile and run the project, you will have a Window as the following picture. First, all the small spheres in **yellow** and **black** color are representing the **point light**, which emits light ray in 360 degree. Then, the two small spheres in **yellow** and **white** color with arrows are representing the spot-light. The two panels in **yellow** and **blue** colors with many arrows are representing the area-light. The three big spheres in **blue**,**yellow**,and **red** colors are defined as the **sceneObject**. The rabbit, which is sitting on the **yellow** sphere is a Mesh object. Finally, the wall panels and the table panels are defined as **plane** object, which is inherited from the **SceneObject**.
 ![Screen Shot 2021-01-26 at 9 56 25 PM](https://user-images.githubusercontent.com/25276186/105949349-63d4a680-6021-11eb-853f-d062f4cca61f.png)
 
+# Adding renderable scene object into the RayTracingSystem 
+-  In **ofApp.cpp** file, you may add floor plane/wall plane to Systen using following code
+```
+this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,-2,0),glm::vec3(0,1,0),ofColor::lightCyan,40,40, nullptr,true));
+```
+The First parameter : position of the plane.<br />
+The second parameter : normal vector of the plane.<br /> 
+The thrid parameter(optional) : the color of the plane.<br />
+The fourth parameter(optional) : the width of the plane.<br />
+The fifth parameter(optional): the length of the plane.<br />
+The sixth parameter(optional): the pointer to ofImage object.<br />
+The last parameter(optional): a boolean stands if a plane is mirror reflectable or not.<br />
+
+**Note: if you don't pass value to a optional parameter, the constructor of the **Plane** object will provide it.**
