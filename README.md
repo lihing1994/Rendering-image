@@ -88,7 +88,8 @@ The fourth parameter(optional) **MeshObj** object: the special color for each **
 ![Screen Shot 2021-01-28 at 4 32 07 AM](https://user-images.githubusercontent.com/25276186/106139093-d6c54680-6121-11eb-85f8-fb31f077b303.png)
 <br /><br />
 
-- In **ofApp.cpp** file, you may add **LightSource** object, which is a **point light**, to System. The following code is an example to add **LightSource** object to **RayTracingSystem**.
+# Adding different type of light source to the rendering system. 
+- In **ofApp.cpp** file, you may add normal **LightSource** object, which is a **point light**, to rendering system. The following code is an example to add **LightSource** object to **RayTracingSystem**.
 ```
 this->_ray_tracing_system->addLightSource(new LightSource(glm::vec3(-16,23,-17),5.0f,ofColor::yellow));
 ```
