@@ -123,4 +123,4 @@ A SpotLight is inherited from LightSource.**
 this->_ray_tracing_system->addLightSource(new AreaLight(glm::vec3(-15,5,0),glm::vec3(1,0,0),100.0f,-40.0f,ofColor::yellow,3.0f,3.0f,5),false,true);
 ```
 
-**ReadMe file no completed. To be contuined.**
+**ReadMe file no completed yet. To be contuined.**
