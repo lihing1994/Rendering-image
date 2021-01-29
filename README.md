@@ -87,3 +87,13 @@ The thrid parameter(optional) **MeshObj** object: the diffuse color for each **T
 The fourth parameter(optional) **MeshObj** object: the special color for each **Triangle Mesh** in the **obj** file.<br />
 ![Screen Shot 2021-01-28 at 4 32 07 AM](https://user-images.githubusercontent.com/25276186/106139093-d6c54680-6121-11eb-85f8-fb31f077b303.png)
 <br /><br />
+
+- In **ofApp.cpp** file, you may add **LightSource** object, which is a **point light**, to System. The following code is an example to add **LightSource** object to **RayTracingSystem**.
+```
+this->_ray_tracing_system->addLightSource(new LightSource(glm::vec3(-16,23,-17),5.0f,ofColor::yellow));
+```
+The first parameter of **LightSource** object: the position of **LightSource**.<br />
+The second parameter of **LightSource** object : the intensity of the **LightSource**.<br /> 
+The thrid parameter(optional) **LightSource** object: the color of the **LightSource** object.<br />
+The fourth parameter(optional) **LightSource** object: the coefficient of Phong power of the **LightSource** object.<br />
+![Screen Shot 2021-01-29 at 2 49 43 AM](https://user-images.githubusercontent.com/25276186/106265984-b27a7000-61dc-11eb-8289-9cc0025f6e3a.png)
