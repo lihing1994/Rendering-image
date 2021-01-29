@@ -112,8 +112,8 @@ The thrid parameter of **SpotLight** object constructor: the illumination angle 
 The fourth parameter of **SpotLight** object constructor: the direction vector that SpotLight is pointing to.<br />
 The fifth parameter(optional) of **SpotLight** object constructor: the color of the **SpotLight**.<br />
 
-**Note: The last boolean parameter is standing for if the lightsource being added is a SpotLightSource object or not. 
-A SpotLight is inherited from LightSource.**
+<span style="color:blue">**Note: The last boolean parameter is standing for if the lightsource being added is a SpotLightSource object or not. 
+A SpotLight is inherited from LightSource.**</span>
 
 ![Screen Shot 2021-01-29 at 3 01 36 AM](https://user-images.githubusercontent.com/25276186/106267326-54e72300-61de-11eb-82ab-04e47671dc71.png)
 <br /><br />
