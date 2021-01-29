@@ -103,11 +103,22 @@ The fourth parameter(optional) **LightSource** object: the coefficient of Phong 
 - In **ofApp.cpp** file, you may add **SpotLight** object to rendering system. The following code is an example to add **SpotLight** object to **RayTracingSystem**.
 ```
 this->_ray_tracing_system->addLightSource(new SpotLightSource(glm::vec3(8,10,12),5.0f,15.0f,glm::vec3(-4,2,0),ofColor::white),true);
+//Note: The last boolean parameter is standing for if the lightsource being added is a SpotLightSource object or not. 
+//A SpotLight is inherited from LightSource
 ```
-The First parameter of **SpotLight** : position of the SpotLight.<br />
-The second parameter of **SpotLight** : the intensity of the **SpotLight**.<br /> 
-The thrid parameter of **SpotLight** : the illumination angle of **SpotLight**.<br />
-The fourth parameter of **SpotLight** : the direction vector that SpotLight is pointing to.<br />
-The fifth parameter(optional): the color of the **SpotLight**.<br />
-![Screen Shot 2021-01-29 at 3 01 36 AM](https://user-images.githubusercontent.com/25276186/106267326-54e72300-61de-11eb-82ab-04e47671dc71.png)
+The First parameter of **SpotLight** object constructor: position of the SpotLight.<br />
+The second parameter of **SpotLight** object constructor: the intensity of the **SpotLight**.<br /> 
+The thrid parameter of **SpotLight** object constructor: the illumination angle of **SpotLight**.<br />
+The fourth parameter of **SpotLight** object constructor: the direction vector that SpotLight is pointing to.<br />
+The fifth parameter(optional) of **SpotLight** object constructor: the color of the **SpotLight**.<br />
 
+**Note: The last boolean parameter is standing for if the lightsource being added is a SpotLightSource object or not. 
+A SpotLight is inherited from LightSource.**
+
+![Screen Shot 2021-01-29 at 3 01 36 AM](https://user-images.githubusercontent.com/25276186/106267326-54e72300-61de-11eb-82ab-04e47671dc71.png)
+<br /><br />
+
+- In **ofApp.cpp** file, you may add **AreaLight** object to rendering system. The following code is an example to add **AreaLight** object to **RayTracingSystem**.
+```
+this->_ray_tracing_system->addLightSource(new AreaLight(glm::vec3(-15,5,0),glm::vec3(1,0,0),100.0f,-40.0f,ofColor::yellow,3.0f,3.0f,5),false,true);
+```
