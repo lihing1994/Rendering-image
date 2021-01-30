@@ -100,7 +100,7 @@ The fourth parameter(optional) **LightSource** object: the coefficient of Phong 
 ![Screen Shot 2021-01-29 at 2 49 43 AM](https://user-images.githubusercontent.com/25276186/106265984-b27a7000-61dc-11eb-8289-9cc0025f6e3a.png)
 <br /><br />
 
-- In **ofApp.cpp** file, you may add **SpotLight** object to rendering system. The following code is an example to add **SpotLight** object to **RayTracingSystem**.*A SpotLight is inherited from LightSource.*
+- In **ofApp.cpp** file, you may add **SpotLight** object to rendering system. The following code is an example to add **SpotLight** object to **RayTracingSystem**.**A SpotLight is inherited from LightSource.**
 ```
 this->_ray_tracing_system->addLightSource(new SpotLightSource(glm::vec3(8,10,12),5.0f,15.0f,glm::vec3(-4,2,0),ofColor::white),true);
 // Note: The boolean parameter in the function addLightSource function is repersenting that if the lightsource being added is a SpotLightSource object or not. 
