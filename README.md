@@ -138,7 +138,7 @@ The thrid: the illumination angle of **SpotLight**.<br />
 The fourth: the direction vector that SpotLight is pointing to.<br />
 The fifth(optional): the color of the **SpotLight**.<br />
 
-**Note: The last boolean parameter in addLightSource function is repersenting for if the light being added is a SpotLightSource object or not. **
+**Note: The last boolean parameter in addLightSource function is repersenting for if the light being added is a SpotLightSource object or not.**
 
 ![Screen Shot 2021-01-29 at 3 01 36 AM](https://user-images.githubusercontent.com/25276186/106267326-54e72300-61de-11eb-82ab-04e47671dc71.png)
 <br /><br />
@@ -189,7 +189,7 @@ this->_gui.add(this->_thrid_area_light_position.setup("Thrid(New Added) area-lig
 Note: Each parameter for the **setup** function the component object you just defined in the **ofApp.h** file as following.<br/><br/>
 First parameter: Initial value for the component.<br/>
 Second parameter: The minimum(Min) value for the component.<br/>
-Thrid parameter: The maximum(Max) value for the component.<br/>
+Thrid parameter: The maximum(Max) value for the component.<br/><br/>
 That is to say, the code shown above, give you a component, which it initial values for **x, y, and z** are **15, 5,and 0**. The Min values for **x,y, and z** are **-20, -20, and -20**. The Max values for **x, y, and z** are **20, 20, and 20**. 
 ![Screen Shot 2021-01-29 at 10 48 30 PM](https://user-images.githubusercontent.com/25276186/106349800-c0380000-6285-11eb-9b40-041831dfb2d4.png)
 ![Screen Shot 2021-01-29 at 10 59 15 PM](https://user-images.githubusercontent.com/25276186/106349801-c4641d80-6285-11eb-9850-6d27460e321c.png)
