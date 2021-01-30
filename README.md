@@ -102,8 +102,9 @@ The fourth parameter(optional) **LightSource** object: the coefficient of Phong 
 
 - In **ofApp.cpp** file, you may add **SpotLight** object to rendering system. The following code is an example to add **SpotLight** object to **RayTracingSystem**.**A SpotLight is inherited from LightSource.**
 ```
+// Note: The boolean parameter in the function addLightSource function is representing that 
+//       if the lightsource being added is a SpotLightSource object or not. 
 this->_ray_tracing_system->addLightSource(new SpotLightSource(glm::vec3(8,10,12),5.0f,15.0f,glm::vec3(-4,2,0),ofColor::white),true);
-// Note: The boolean parameter in the function addLightSource function is repersenting that if the lightsource being added is a SpotLightSource object or not. 
 ```
 The First parameter of **SpotLight** object constructor: position of the SpotLight.<br />
 The second parameter of **SpotLight** object constructor: the intensity of the **SpotLight**.<br /> 
@@ -119,7 +120,10 @@ A SpotLight is inherited from LightSource.**
 
 - In **ofApp.cpp** file, you may add **AreaLight** object to rendering system. The following code is an example to add **AreaLight** object to **RayTracingSystem**.
 ```
+// Note: The second boolean parameter in the addLightSource function is representing if the lightsouce being added is a spotlight or not. 
+// In this case, you want to add a arealight, therefore it value of that boolean parameter is false.
+// The last boolean parameter in the addLightSource function is representing if the lightsouce being added is a arealight or not. 
+// In this case, the value of the boolean parameter is true. 
 this->_ray_tracing_system->addLightSource(new AreaLight(glm::vec3(-15,5,0),glm::vec3(1,0,0),100.0f,-40.0f,ofColor::yellow,3.0f,3.0f,5),false,true);
-//Note: The 
 ```
 
