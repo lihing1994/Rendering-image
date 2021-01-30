@@ -169,13 +169,13 @@ The last : number of n by n **pointLight** has been integraled in **AreaLight**.
 ![Screen Shot 2021-01-29 at 7 41 04 PM](https://user-images.githubusercontent.com/25276186/106346216-46dee400-626a-11eb-9fae-2e0ab1e43459.png)
 
 # GUI
-- When you run the project, you may use the GUI panel, which located on the left top corner of window, to adjust information for different type of light source. You may change the postion for **SpotLight** and **AreaLight**. Also, you may change the coefficient intensity and power for each lights. Finally, you may change the illumination angle for the **SpotLight** and the rotation angle for the **AreaLight**. 
+- When you run the project, you may use the GUI panel, which located at the left top corner of window, to adjust information for different type of light source. You may change the postion for **SpotLight** and **AreaLight**. Also, you may change the coefficient intensity and power for each lights. Finally, you may change the illumination angle for the **SpotLight** and the rotation angle for the **AreaLight**. 
 ![Screen Shot 2021-01-29 at 9 51 37 PM](https://user-images.githubusercontent.com/25276186/106348621-60892700-627c-11eb-9e6f-e9c9b91a9513.png)
 
 # Adding more controller to GUI
 - If you wish to add more controller to GUI panel, you may begin with reviewing following link to obtain a basic understanding about **ofxGUI** object.[Tutorial of using GUI](https://openframeworks.cc/learning/01_basics/how_to_create_slider/)<br/><br/>
 
-- Now following steps are an example to add another controller to changed position of an additional **AreaLight**.
+- Now following steps show your an example to add another controller to changed position of an additional **AreaLight**.
 Step 1: <br/>
 In the **ofApp.h** file, you may define a new **ofxVec3Slider** variable, which is one of **component** can be add to **GUI** panel. 
 ![Screen Shot 2021-01-29 at 10 35 06 PM](https://user-images.githubusercontent.com/25276186/106349392-6c77e780-6282-11eb-8423-4eedf667ca19.png)<br/><br/>
@@ -186,7 +186,7 @@ Following code is showing you an example to do so<br/>
 ```
 this->_gui.add(this->_thrid_area_light_position.setup("Thrid(New Added) area-light position: ",ofVec3f(15,5,0),ofVec3f(-20,-20,-20), ofVec3f(20,20,20)));
 ```
-Note: Each parameter for the **setup** function the component object you just defined in the **ofApp.h** file as following.<br/><br/>
+Note: Each parameter for the **setup** function of the component object you just defined as following.<br/><br/>
 First parameter: Initial value for the component.<br/>
 Second parameter: The minimum(Min) value for the component.<br/>
 Thrid parameter: The maximum(Max) value for the component.<br/><br/>
