@@ -127,8 +127,7 @@ The thrid: the illumination angle of **SpotLight**.<br />
 The fourth: the direction vector that SpotLight is pointing to.<br />
 The fifth(optional): the color of the **SpotLight**.<br />
 
-**Note: The last boolean parameter is standing for if the lightsource being added is a SpotLightSource object or not. 
-A SpotLight is inherited from LightSource.**
+**Note: The last boolean parameter in addLightSource function is standing for if the light being added is a SpotLightSource object or not. **
 
 ![Screen Shot 2021-01-29 at 3 01 36 AM](https://user-images.githubusercontent.com/25276186/106267326-54e72300-61de-11eb-82ab-04e47671dc71.png)
 <br /><br />
@@ -155,4 +154,5 @@ The sixth : the length of the **AreaLight**.<br />
 The seventh : the width of the **AreaLight**. <br/>
 The last : number of n by n **pointLight** has been integraled in **AreaLight**. <br/>
 (e.g) if the value of the last parameter is 5, it means there are number of 5x5, which is 25, pointLight objects has been included in the **AreaLight** <br/><br/>
+**Note: The last boolean parameter in addLightSource function is standing for if the light being added is a AreaLight object or not. **
 ![Screen Shot 2021-01-29 at 7 41 04 PM](https://user-images.githubusercontent.com/25276186/106346216-46dee400-626a-11eb-9fae-2e0ab1e43459.png)
