@@ -34,6 +34,14 @@
 - Now if you compile and run the project, you will have a Window as the following picture. First, all the small spheres in **yellow** and **black** color are representing the **point light**, which emits light ray in 360 degree. Then, the two small spheres in **yellow** and **white** color with arrows are representing the spot-light. The two panels in **yellow** and **blue** colors with many arrows are representing the area-light. The three big spheres in **blue**,**yellow**,and **red** colors are defined as the **sceneObject**. The rabbit, which is sitting on the **yellow** sphere is a Mesh object. Finally, the wall panels and the table panels are defined as **plane** object, which is inherited from the **SceneObject**.
 ![Screen Shot 2021-01-26 at 9 56 25 PM](https://user-images.githubusercontent.com/25276186/105949349-63d4a680-6021-11eb-853f-d062f4cca61f.png)<br /><br />
 
+# Explanation of addLightSource function in RayTracingSystem
+- The addLightSource function in **RayTracingSystem** is taking only one parameter, which is a pointer to **SceneObject**.<br /><br />
+A **SceneObject** object can be one of the following object:
+- **SceneObject**, which is the base object that can be added to **RayTracingSystem**.
+- **Plane**, which is inherited from **SceneObject**.
+- **Sphere**, which is inherited from **SceneObject**.
+- **MeshObj**, which is inherited from **SceneObject**.<br /><br />
+
 
 # Adding renderable scene object into the RayTracingSystem 
 -  In **ofApp.cpp** file, you may add **floor plane/wall plane** object to the System. The following code are an examples to add **Plane** object to **RayTracingSystem**. 
@@ -54,7 +62,7 @@ The last(optional): a boolean value stands if the plane is mirror reflectable or
 **Note: if you don't pass value to a optional parameter, the constructor of the **Plane** object will provide default value for it.**
 ![Screen Shot 2021-01-28 at 2 38 39 AM](https://user-images.githubusercontent.com/25276186/106126946-e38e6e00-6112-11eb-9cc1-5b23eae9f666.png)<br /> <br />
 
-- In **ofApp.cpp** file, you may add **sphere** to System. The following code is an example to add **sphere** object to **RayTracingSystem**.
+- In **ofApp.cpp** file, you may add **Sphere** to System. The following code is an example to add **Sphere** object to **RayTracingSystem**.
 ```
 this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-4,2,0),3.0f,ofColor::blue)); // A sphere.
 this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-6,2,0),3.0f)); // A sphere with default color.
@@ -91,7 +99,7 @@ The fourth(optional): the special color for each **Triangle Mesh** in the **obj*
 ![Screen Shot 2021-01-28 at 4 32 07 AM](https://user-images.githubusercontent.com/25276186/106139093-d6c54680-6121-11eb-85f8-fb31f077b303.png)
 <br /><br />
 
-# Explantion of addLightSource function in RayTracingSystem. 
+# Explanation of addLightSource function in RayTracingSystem. 
 - The addLightSource function in the **RayTracingSystem** takes three parameters, a pointer to one type of light, and two boolean vaule. The first parameter is mandatory while second and the thrid are optional.
 The first parameters is a pointer to one of lightscoure object as following: 
 - LightSource, which is normal point light with 360 illumination angle.
@@ -99,7 +107,7 @@ The first parameters is a pointer to one of lightscoure object as following:
 - AreaLight, which is inherited from LightSource, and it is considered as integration of many of point light object in one panel. <br /><br />
 
 The second of boolean parameter:
-- It represents if the light being added to the **RayTracingSystem** is a **SpotLight** object or not. It is a optional paramter. If you don't provide a value to this parameter, the default value for this parameter is **false**. <br /><br />
+- It represents if the light being added to the **RayTracingSystem** is a **SpotLight** object or not. It is a optional parameter. If you don't provide a value to this parameter, the default value for this parameter is **false**. <br /><br />
 
 The thrid pf boolean parameter: 
 - It represents if the light being added to the **RayTracingSystem** is a **AreaLight** object or not. It is a optional paramter. If you don't provide a value to this parameter, the default value for this parameter is **false**. <br /><br />
