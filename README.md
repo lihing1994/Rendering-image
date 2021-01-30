@@ -200,7 +200,7 @@ In the **update** function of **ofApp.cpp** file, you may call **updateAreaLight
 ```
 this->_ray_tracing_system->updateAreaLightPosition(this->_thrid_area_light_position, 2);
 ```
-The **updateAreaLightPosition** takes two parameter. The first parameter is the **ofxVec3Slider** object, which containe the inforamtion of new position that the **AreaLight** object should be shift to. The second parameter is the index of the **AreaLight** object in the **RayTracingSystem**. In this example, since there were two **AreaLight** objects were already added in the **RayTracingSystem**, the index of the latest **AreaLight** that has been added in the **RayTracingSystem** is 2 (index starts from 0).
+The **updateAreaLightPosition** function takes two parameter. The first parameter is an **ofxVec3Slider** object, which containe the inforamtion of new position that the **AreaLight** object will be shift to. The second parameter is the index of the **AreaLight** object in the **RayTracingSystem**. In this example, since there were two **AreaLight** objects were already added in the **RayTracingSystem**, the index of the latest **AreaLight** that has been added in the **RayTracingSystem** is 2 (index starts from 0).
 ![Screen Shot 2021-01-30 at 12 40 02 AM](https://user-images.githubusercontent.com/25276186/106352050-ffba1880-6294-11eb-9390-ff48d95b42f7.png)
 
 
