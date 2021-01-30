@@ -215,3 +215,6 @@ The **updateAreaLightPosition** function takes two parameter. The first paramete
 ![myImage_3](https://user-images.githubusercontent.com/25276186/106352117-9090f400-6295-11eb-8850-508dc4f11a41.jpg) <br/><br/>
 - An image with wall plane, table plane, textrue, Point light, AreaLight, Spot Light, and Mirror reflection.
 ![myImage](https://user-images.githubusercontent.com/25276186/106352178-cfbf4500-6295-11eb-8252-b31d7aee6e73.jpg)
+
+# Credit
+Hing Li 
