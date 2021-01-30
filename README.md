@@ -167,3 +167,8 @@ The last : number of n by n **pointLight** has been integraled in **AreaLight**.
 (e.g) if the value of the last parameter is 5, it means there are number of 5x5, which is 25, pointLight objects has been included in the **AreaLight** <br/><br/>
 **Note: The last boolean parameter in addLightSource function is repersenting for if the light being added is a AreaLight object or not.**
 ![Screen Shot 2021-01-29 at 7 41 04 PM](https://user-images.githubusercontent.com/25276186/106346216-46dee400-626a-11eb-9fae-2e0ab1e43459.png)
+
+# How to rendering an Image.
+- After you add renderable object and different type of lights to the **RenderingSystem**, you may recompile and run the code again. Then you may press "s" key from keyboard to begin the process of rendering. After the process of rendering completed, you may press "F4" from keyboard to review the image that just been generated. 
+
+
