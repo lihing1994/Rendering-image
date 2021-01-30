@@ -9,9 +9,9 @@
 ![Screen Shot 2021-01-25 at 11 25 47 PM](https://user-images.githubusercontent.com/25276186/105813492-c1ef8400-5f64-11eb-90d6-d98aa878290a.png)<br />
 - Open the folder, than you may find a file called **projectGenerator**.
 ![Screen Shot 2021-01-25 at 11 27 58 PM](https://user-images.githubusercontent.com/25276186/105813686-0f6bf100-5f65-11eb-8fc0-7d06c9c6a501.png)<br />
-- If it is your first time to run **projectGenerator** file, you may have **runMeFirst.command** file first. First Select the **runMeFirst.command** the file. Then, right clik the file and run the file in Terminal. 
+- If it is your first time to run **projectGenerator** file, you may have to run the **runMeFirst.command** file first. First Select the **runMeFirst.command** the file. Then, right clik the file and run the file in Terminal. 
 ![Screen Shot 2021-01-25 at 11 29 50 PM](https://user-images.githubusercontent.com/25276186/105814400-37a81f80-5f66-11eb-8953-84c9acbc0a41.png)<br />
-- Open the projectGenerator. Then, you may name the project with anyname you want. Then, in the addons area, you may have to add **ofxassimpmodelloader** and **ofxgui** addons to your project in order to run all source codes of this project. Finally, creating the project by cliking the **Generate** button.               
+- Open the projectGenerator. Then, you may name the project with anyname you want. Then, in the addons area, you need to add **ofxassimpmodelloader** and **ofxgui** addons to your project in order to run all source codes of this project. Finally, creating the project by cliking the **Generate** button.               
 ![Screen Shot 2021-01-25 at 11 40 45 PM](https://user-images.githubusercontent.com/25276186/105814820-cd43af00-5f66-11eb-9e99-7880e934ea31.png)<br /><br />
 
 
