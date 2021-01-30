@@ -120,10 +120,11 @@ A SpotLight is inherited from LightSource.**
 
 - In **ofApp.cpp** file, you may add **AreaLight** object to rendering system. The following code is an example to add **AreaLight** object to **RayTracingSystem**.
 ```
-// Note: The second boolean parameter in the addLightSource function is representing if the lightsouce being added is a spotlight or not. 
-// In this case, you want to add a arealight, therefore it value of that boolean parameter is false.
-// The last boolean parameter in the addLightSource function is representing if the lightsouce being added is a arealight or not. 
-// In this case, the value of the boolean parameter is true. 
+// Note: The second boolean parameter in the addLightSource function is representing 
+//       if the lightsouce being added is a spotlight or not. 
+//       In this case, you want to add a arealight, therefore it value of that boolean parameter is false.
+//       The last boolean parameter in the addLightSource function is representing if the lightsouce being added is a arealight or not. 
+//       In this case, the value of the boolean parameter is true. 
 this->_ray_tracing_system->addLightSource(new AreaLight(glm::vec3(-15,5,0),glm::vec3(1,0,0),100.0f,-40.0f,ofColor::yellow,3.0f,3.0f,5),false,true);
 ```
 
