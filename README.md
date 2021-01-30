@@ -193,6 +193,15 @@ Thrid parameter: The maximum(Max) value for the component.<br/><br/>
 That is to say, the code shown above, give you a component, which it initial values for **x, y, and z** are **15, 5,and 0**. The Min values for **x,y, and z** are **-20, -20, and -20**. The Max values for **x, y, and z** are **20, 20, and 20**. 
 ![Screen Shot 2021-01-29 at 10 48 30 PM](https://user-images.githubusercontent.com/25276186/106349800-c0380000-6285-11eb-9b40-041831dfb2d4.png)
 ![Screen Shot 2021-01-29 at 10 59 15 PM](https://user-images.githubusercontent.com/25276186/106349801-c4641d80-6285-11eb-9850-6d27460e321c.png)
+<br/><br/>
+
+Step 3:
+In the **update** function of **ofApp.cpp** file, you may call **updateAreaLightPosition** in the **RayTracingSystem** to update the position of a **AreaLight** object. Following code are an example to update the position for an area light.
+```
+this->_ray_tracing_system->updateAreaLightPosition(this->_thrid_area_light_position, 2);
+```
+The **updateAreaLightPosition** takes two parameter. The first parameter is the **ofxVec3Slider** object, which containe the inforamtion of new position that the **AreaLight** object should be shift to. The second parameter is the index of the **AreaLight** object in the **RayTracingSystem**. In this example, since there were two **AreaLight** objects were already added in the **RayTracingSystem**, the index of the latest **AreaLight** that has been added in the **RayTracingSystem** is 2 (index starts from 0).
+![Screen Shot 2021-01-30 at 12 40 02 AM](https://user-images.githubusercontent.com/25276186/106352050-ffba1880-6294-11eb-9390-ff48d95b42f7.png)
 
 
 # (Important) How to rendering an Image.
