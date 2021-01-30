@@ -89,6 +89,19 @@ The fourth parameter in the constructor of **MeshObj** object(optional): the spe
 <br /><br />
 
 # Adding different type of light source to the rendering system. 
+- The addLightSource function in the **RayTracingSystem** take three parameters, a pointer to one type of light, and two boolean vaule.The first parameter is mandatory while second and the thrid are optional.
+The first parameters is a pointer to one of lightscoure object as following: 
+- LightSource, which is normal point light with 360 illumination angle.
+- SpotLight, which is inherited from LightSource, and it has limited illumination angle.
+- AreaLight, which is inherited from LightSource, and it is considered as integration of many of point light object in one panel. <br /><br />
+
+The second of boolean parameter:
+- It represents if the light being added to the **RayTracingSystem** is a **SpotLight** object or not. It is a optional paramter. If you don't provide a value to this parameter, the default value for this parameter is **false**. <br /><br />
+
+The thrid pf boolean parameter: 
+- It represents if the light being added to the **RayTracingSystem** is a **AreaLight** object or not. It is a optional paramter. If you don't provide a value to this parameter, the default value for this parameter is **false**. <br /><br />
+
+
 - In **ofApp.cpp** file, you may add normal **LightSource** object, which is a **point light**, to rendering system. The following code is an example to add **LightSource** object to **RayTracingSystem**.
 ```
 this->_ray_tracing_system->addLightSource(new LightSource(glm::vec3(-16,23,-17),5.0f,ofColor::yellow));
@@ -140,3 +153,4 @@ The sixth : the length of the **AreaLight**.<br />
 The seventh : the width of the **AreaLight**. <br/>
 The last : number of n by n **pointLight** has been integraled in **AreaLight**. <br/>
 (e.g) if the value of the last parameter is 5, it means there are number of 5x5, which is 25, pointLight objects has been included in the **AreaLight** <br/><br/>
+![Screen Shot 2021-01-29 at 7 41 04 PM](https://user-images.githubusercontent.com/25276186/106346216-46dee400-626a-11eb-9fae-2e0ab1e43459.png)
