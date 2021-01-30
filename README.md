@@ -158,7 +158,7 @@ The first : position of the **AreaLight**.<br />
 The second : the outer normal of the **AreaLight**.<br /> 
 The thrid : the intensity coefficient of **AreaLight**.<br />
 The fourth : the rotation angle relative to axis, which is parallel to **AreaLight**.<br /> <br />
-(e.g) For instanc, if an **AreaLight** object has a outer normal (1,0,0), the illumination dirction of the **AreaLight** is to the positive x axis.<br />
+(e.g) For instance, if an **AreaLight** object has a outer normal (1,0,0), the illumination dirction of the **AreaLight** is to the positive x axis.<br />
       Then, rotation angle for this **AreaLight** is relatvie to positvie y axis. <br /><br />
 The fifth : the color of the **AreaLight**.<br />
 The sixth : the length of the **AreaLight**.<br />
