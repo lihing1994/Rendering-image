@@ -81,10 +81,10 @@ else
     return;
 }
 ```
-The first parameter of **MeshObj** object: the position for obj file.<br />
-The second parameter of **MeshObj** object : the pointer to **ofxAssimpModelLoader**, which is used to load obj file.<br /> 
-The thrid parameter(optional) **MeshObj** object: the diffuse color for each **Triangle Mesh** in the **obj** file.<br />
-The fourth parameter(optional) **MeshObj** object: the special color for each **Triangle Mesh** in the **obj** file.<br />
+The first parameter in the constructor of **MeshObj** object: the position for obj file.<br />
+The second parameter in the constructor of **MeshObj** object : the pointer to **ofxAssimpModelLoader**, which is used to load obj file.<br /> 
+The thrid parameter in the **MeshObj** object(optional): the diffuse color for each **Triangle Mesh** in the **obj** file.<br />
+The fourth parameter in the constructor of **MeshObj** object(optional): the special color for each **Triangle Mesh** in the **obj** file.<br />
 ![Screen Shot 2021-01-28 at 4 32 07 AM](https://user-images.githubusercontent.com/25276186/106139093-d6c54680-6121-11eb-85f8-fb31f077b303.png)
 <br /><br />
 
@@ -106,11 +106,11 @@ The fourth parameter(optional) **LightSource** object: the coefficient of Phong 
 //       if the lightsource being added is a SpotLightSource object or not. 
 this->_ray_tracing_system->addLightSource(new SpotLightSource(glm::vec3(8,10,12),5.0f,15.0f,glm::vec3(-4,2,0),ofColor::white),true);
 ```
-The First parameter of **SpotLight** object constructor: position of the SpotLight.<br />
-The second parameter of **SpotLight** object constructor: the intensity of the **SpotLight**.<br /> 
-The thrid parameter of **SpotLight** object constructor: the illumination angle of **SpotLight**.<br />
-The fourth parameter of **SpotLight** object constructor: the direction vector that SpotLight is pointing to.<br />
-The fifth parameter(optional) of **SpotLight** object constructor: the color of the **SpotLight**.<br />
+The First parameter in the constructor of **SpotLight** object: position of the SpotLight.<br />
+The second parameter in the constructor of **SpotLight** object: the intensity of the **SpotLight**.<br /> 
+The thrid parameter in the constructor of **SpotLight** object: the illumination angle of **SpotLight**.<br />
+The fourth parameter in the constructor of **SpotLight** object: the direction vector that SpotLight is pointing to.<br />
+The fifth parameter in the constructor of **SpotLight** object(optional): the color of the **SpotLight**.<br />
 
 **Note: The last boolean parameter is standing for if the lightsource being added is a SpotLightSource object or not. 
 A SpotLight is inherited from LightSource.**
@@ -128,4 +128,14 @@ A SpotLight is inherited from LightSource.**
 //       In this case, the value of the boolean parameter is true. 
 this->_ray_tracing_system->addLightSource(new AreaLight(glm::vec3(-15,5,0),glm::vec3(1,0,0),100.0f,-40.0f,ofColor::yellow,3.0f,3.0f,5),false,true);
 ```
-
+The First parameter in the constructor of **AreaLight** object: position of the **AreaLight**.<br />
+The second parameter in the constructor of **AreaLight** object: the outer normal of the **AreaLight**.<br /> 
+The thrid parameter in the constructor of **AreaLight** object: the intensity coefficient of **AreaLight**.<br />
+The fourth parameter in the constructor of **AreaLight** object: the rotation angle relative to axis, which is parallel to **AreaLight**.<br /> <br />
+(e.g) For instanc, if an **AreaLight** object has a outer normal (1,0,0), the illumination dirction of the **AreaLight** is to the positive x axis.<br />
+      Then, rotation angle for this **AreaLight** is relatvie to positvie y axis. <br /><br />
+The fifth parameter in the constructor of **AreaLight** object: the color of the **AreaLight**.<br />
+The sixth parameter in the constructor of **AreaLight** object: the length of the **AreaLight**.<br />
+The seventh parameter in the constructor of **AreaLight** object: the width of the **AreaLight**. <br/>
+The last parameter in the constructor of **AreaLight** object: number of n by n **pointLight** has been integraled in **AreaLight**. <br/>
+(e.g) if the value of the last parameter is 5, it means there are number of 5x5, which is 25, pointLight objects has been included in the **AreaLight** <br/><br/>
