@@ -168,7 +168,12 @@ The last : number of n by n **pointLight** has been integraled in **AreaLight**.
 **Note: The last boolean parameter in addLightSource function is repersenting for if the light being added is a AreaLight object or not.**
 ![Screen Shot 2021-01-29 at 7 41 04 PM](https://user-images.githubusercontent.com/25276186/106346216-46dee400-626a-11eb-9fae-2e0ab1e43459.png)
 
-# How to rendering an Image.
+# GUI
+- When you run the project, you may use the GUI panel, which located on the left top corner of window, to adjust information for different type of light source. You may change the postion for **SpotLight** and **AreaLight**. Also, you may change the coefficient intensity and power for each lights you added. Finally, you may change the illumination angle for the **SpotLight** and the rotation angle for the **AreaLight**. 
+![Screen Shot 2021-01-29 at 9 51 37 PM](https://user-images.githubusercontent.com/25276186/106348621-60892700-627c-11eb-9e6f-e9c9b91a9513.png)
+
+
+# (Important) How to rendering an Image.
 - After you add renderable object and different type of lights to the **RenderingSystem**, you may recompile and run the code again. Then you may press **"s"** key from keyboard to begin the process of rendering. After the process of rendering completed, you may press **"F4"** from keyboard to review the image that just been generated. 
 
 
