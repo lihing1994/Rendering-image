@@ -1,5 +1,5 @@
 # Introduction
- - The project focus on creating a 3D enivernment and rendering an image based on the enivernment we just defined using Ray-Tracing algorthim. To make the image looks more realistic, the following shading technique and lighting effects have been implemented including, Phong shading, Lambert shading, Point-light, Spot-light, Area-light, and mirror reflection effect. The project is implemented by OpenFrameWork, which is a C++ toolkit. In order to run this project, you may download the OpenFrameWork toolkit by cliking following link:  [Link To Download OpenFrameWork](https://openframeworks.cc/download/)<br /><br />
+ - The project focus on creating a 3D enivernment and rendering an image based on the enivernment we just created using Ray-Tracing algorthim. To make the image looks more realistic, the following shading technique and lighting effects have been implemented including, Phong shading, Lambert shading, Point-light, Spot-light, Area-light, and mirror reflection effect. The project is implemented by OpenFrameWork, which is a C++ toolkit. In order to run this project, you may download the OpenFrameWork toolkit by cliking following link:  [Link To Download OpenFrameWork](https://openframeworks.cc/download/)<br /><br />
 
 
 ## Creating an OpenFrameWork Project on your computer(You may skip this steps if you are familiar with OpenFrameWork).
@@ -34,8 +34,8 @@
 - Now if you compile and run the project, you will have a Window as the following picture. First, all the small spheres in **yellow** and **black** color are representing the **point light**, which emits light ray in 360 degree. Then, the two small spheres in **yellow** and **white** color with arrows are representing the spot-light. The two panels in **yellow** and **blue** colors with many arrows are representing the area-light. The three big spheres in **blue**,**yellow**,and **red** colors are defined as the **sceneObject**. The rabbit, which is sitting on the **yellow** sphere is a Mesh object. Finally, the wall panels and the table panels are defined as **plane** object, which is inherited from the **SceneObject**.
 ![Screen Shot 2021-01-26 at 9 56 25 PM](https://user-images.githubusercontent.com/25276186/105949349-63d4a680-6021-11eb-853f-d062f4cca61f.png)<br /><br />
 
-# Explanation of addLightSource function in RayTracingSystem
-- The addLightSource function in **RayTracingSystem** is taking only one parameter, which is a pointer to **SceneObject**.<br /><br />
+# Explanation of addSceneObject function in RayTracingSystem
+- The addSceneObject function in **RayTracingSystem** is taking only one parameter, which is a pointer to **SceneObject**.<br /><br />
 A **SceneObject** object can be one of the following object:
 - **SceneObject**, which is the base object that can be added to **RayTracingSystem**.
 - **Plane**, which is inherited from **SceneObject**.
@@ -44,7 +44,7 @@ A **SceneObject** object can be one of the following object:
 
 
 # Adding renderable scene object into the RayTracingSystem 
--  In **ofApp.cpp** file, you may add **floor plane/wall plane** object to the System. The following code are an examples to add **Plane** object to **RayTracingSystem**. 
+-  In **setup** function at **ofApp.cpp** file, you may add **floor plane/wall plane** object to the System. The following code are an examples to add **Plane** object to **RayTracingSystem**. 
 ```
 this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,-2,0),glm::vec3(0,1,0),ofColor::lightCyan,40,40, nullptr,true)); // A mirror reflectable Plane with not texture.
 this->_ray_tracing_system->addSceneObject(new Plane(glm::vec3(0,18,-20),glm::vec3(0,0,1),ofColor::skyBlue,40,40, new ofImage("wallPlaneTexter.jpeg"))); //A plane with texture but no mirror reflectable.
@@ -62,7 +62,7 @@ The last(optional): a boolean value stands if the plane is mirror reflectable or
 **Note: if you don't pass value to a optional parameter, the constructor of the **Plane** object will provide default value for it.**
 ![Screen Shot 2021-01-28 at 2 38 39 AM](https://user-images.githubusercontent.com/25276186/106126946-e38e6e00-6112-11eb-9cc1-5b23eae9f666.png)<br /> <br />
 
-- In **ofApp.cpp** file, you may add **Sphere** to System. The following code is an example to add **Sphere** object to **RayTracingSystem**.
+- In **setup** function at **ofApp.cpp** file, you may add **Sphere** to System. The following code is an example to add **Sphere** object to **RayTracingSystem**.
 ```
 this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-4,2,0),3.0f,ofColor::blue)); // A sphere.
 this->_ray_tracing_system->addSceneObject(new Sphere(glm::vec3(-6,2,0),3.0f)); // A sphere with default color.
@@ -76,7 +76,7 @@ The fourth(optional) : a boolean value stands if the sphere is mirror reflectabl
 **Note: if you don't pass value to a optional parameter, the constructor of the **Sphere** object will provide default value for it.**
 ![Screen Shot 2021-01-28 at 3 13 43 AM](https://user-images.githubusercontent.com/25276186/106131210-3ff38c80-6117-11eb-93a5-500ae8b16f52.png)<br /><br />
 
-- In **ofApp.cpp** file, you may add **MeshObj** object by importing information from an **obj** file, which is a geometry definition file format. To render image perfectly, the **obj** file should only contains information of **Triangle Mesh**. The following link is showing you how to convert **Polygon** faces to **Triangle** Mesh using AutoDesk Maya.<br />
+- In **setup** function at **ofApp.cpp** file, you may add **MeshObj** object by importing information from an **obj** file, which is a geometry definition file format. To render image perfectly, the **obj** file should only contains information of **Triangle Mesh**. The following link is showing you how to convert **Polygon** faces to **Triangle** Mesh using AutoDesk Maya.<br />
 [Convert Polygon faces to Triangle Mesh](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-Modeling/files/GUID-46439E7A-3FD0-460B-93FC-23917179D101-htm.html)<br /><br />
  The following code is an example to add **MeshObj** object to **RayTracingSystem**.
 ```
@@ -113,7 +113,7 @@ The thrid pf boolean parameter:
 - It represents if the light being added to the **RayTracingSystem** is a **AreaLight** object or not. It is a optional paramter. If you don't provide a value to this parameter, the default value for this parameter is **false**. <br /><br />
 
 # Adding different type of light source to the rendering system. 
-- In **ofApp.cpp** file, you may add normal **LightSource** object, which is a **point light**, to rendering system. The following code is an example to add **LightSource** object to **RayTracingSystem**.
+- In **setup** function at **ofApp.cpp** file, you may add normal **LightSource** object, which is a **point light**, to rendering system. The following code is an example to add **LightSource** object to **RayTracingSystem**.
 ```
 this->_ray_tracing_system->addLightSource(new LightSource(glm::vec3(-16,23,-17),5.0f,ofColor::yellow));
 ```
@@ -125,7 +125,7 @@ The fourth(optional): the coefficient of Phong power of the **LightSource**.<br 
 ![Screen Shot 2021-01-29 at 2 49 43 AM](https://user-images.githubusercontent.com/25276186/106265984-b27a7000-61dc-11eb-8289-9cc0025f6e3a.png)
 <br /><br />
 
-- In **ofApp.cpp** file, you may add **SpotLight** object to rendering system. The following code is an example to add **SpotLight** object to **RayTracingSystem**.**A SpotLight is inherited from LightSource.**
+- In  **setup** function at **ofApp.cpp** file, you may add **SpotLight** object to rendering system. The following code is an example to add **SpotLight** object to **RayTracingSystem**.**A SpotLight is inherited from LightSource.**
 ```
 // Note: The boolean parameter in the function addLightSource function is representing that 
 //       if the lightsource being added is a SpotLightSource object or not. 
@@ -143,7 +143,7 @@ The fifth(optional): the color of the **SpotLight**.<br />
 ![Screen Shot 2021-01-29 at 3 01 36 AM](https://user-images.githubusercontent.com/25276186/106267326-54e72300-61de-11eb-82ab-04e47671dc71.png)
 <br /><br />
 
-- In **ofApp.cpp** file, you may add **AreaLight** object to rendering system. The following code is an example to add **AreaLight** object to **RayTracingSystem**.
+- In  **setup** function at **ofApp.cpp** file, you may add **AreaLight** object to rendering system. The following code is an example to add **AreaLight** object to **RayTracingSystem**.
 ```
 // Note: The second boolean parameter in the addLightSource function is representing 
 //       if the lightsouce being added is a spotlight or not. 
@@ -181,7 +181,7 @@ In the **ofApp.h** file, you may define a new **ofxVec3Slider** variable, which 
 ![Screen Shot 2021-01-29 at 10 35 06 PM](https://user-images.githubusercontent.com/25276186/106349392-6c77e780-6282-11eb-8423-4eedf667ca19.png)<br/><br/>
 
 Step 2: <br/>
-In the **setup** function of **ofApp.cpp** file, you may add the component that you just defined into the **GUI** panel.<br/>
+In the **setup** function at **ofApp.cpp** file, you may add the component that you just defined into the **GUI** panel.<br/>
 Following code is showing you an example to do so<br/>
 ```
 this->_gui.add(this->_thrid_area_light_position.setup("Thrid(New Added) area-light position: ",ofVec3f(15,5,0),ofVec3f(-20,-20,-20), ofVec3f(20,20,20)));
@@ -196,7 +196,7 @@ That is to say, the code shown above, give you a component, which it initial val
 <br/><br/>
 
 Step 3:
-In the **update** function of **ofApp.cpp** file, you may call **updateAreaLightPosition** in the **RayTracingSystem** to update the position of a **AreaLight** object. Following code are an example to update the position for an area light.
+In the **update** function at **ofApp.cpp** file, you may call **updateAreaLightPosition** in the **RayTracingSystem** to update the position of a **AreaLight** object. Following code are an example to update the position for an area light.
 ```
 this->_ray_tracing_system->updateAreaLightPosition(this->_thrid_area_light_position, 2);
 ```
