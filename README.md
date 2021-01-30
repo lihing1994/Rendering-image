@@ -186,7 +186,7 @@ Following code is showing you an example to do so<br/>
 ```
 this->_gui.add(this->_thrid_area_light_position.setup("Thrid(New Added) area-light position: ",ofVec3f(15,5,0),ofVec3f(-20,-20,-20), ofVec3f(20,20,20)));
 ```
-Note: Each parameter for the **setup** function the component object you just defined in the **ofApp.h** file as following.
+Note: Each parameter for the **setup** function the component object you just defined in the **ofApp.h** file as following.<br/><br/>
 First parameter: Initial value for the component.<br/>
 Second parameter: The minimum(Min) value for the component.<br/>
 Thrid parameter: The maximum(Max) value for the component.<br/>
