@@ -88,7 +88,7 @@ The fourth parameter in the constructor of **MeshObj** object(optional): the spe
 ![Screen Shot 2021-01-28 at 4 32 07 AM](https://user-images.githubusercontent.com/25276186/106139093-d6c54680-6121-11eb-85f8-fb31f077b303.png)
 <br /><br />
 
-# Adding different type of light source to the rendering system. 
+# Explantion of addLightSource function in RayTracingSystem. 
 - The addLightSource function in the **RayTracingSystem** take three parameters, a pointer to one type of light, and two boolean vaule.The first parameter is mandatory while second and the thrid are optional.
 The first parameters is a pointer to one of lightscoure object as following: 
 - LightSource, which is normal point light with 360 illumination angle.
@@ -101,7 +101,7 @@ The second of boolean parameter:
 The thrid pf boolean parameter: 
 - It represents if the light being added to the **RayTracingSystem** is a **AreaLight** object or not. It is a optional paramter. If you don't provide a value to this parameter, the default value for this parameter is **false**. <br /><br />
 
-
+# Adding different type of light source to the rendering system. 
 - In **ofApp.cpp** file, you may add normal **LightSource** object, which is a **point light**, to rendering system. The following code is an example to add **LightSource** object to **RayTracingSystem**.
 ```
 this->_ray_tracing_system->addLightSource(new LightSource(glm::vec3(-16,23,-17),5.0f,ofColor::yellow));
