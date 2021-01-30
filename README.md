@@ -128,7 +128,7 @@ A SpotLight is inherited from LightSource.**
 //       In this case, the value of the boolean parameter is true. 
 this->_ray_tracing_system->addLightSource(new AreaLight(glm::vec3(-15,5,0),glm::vec3(1,0,0),100.0f,-40.0f,ofColor::yellow,3.0f,3.0f,5),false,true);
 ```
-The First parameter in the constructor of **AreaLight** object: position of the **AreaLight**.<br />
+The first parameter in the constructor of **AreaLight** object: position of the **AreaLight**.<br />
 The second parameter in the constructor of **AreaLight** object: the outer normal of the **AreaLight**.<br /> 
 The thrid parameter in the constructor of **AreaLight** object: the intensity coefficient of **AreaLight**.<br />
 The fourth parameter in the constructor of **AreaLight** object: the rotation angle relative to axis, which is parallel to **AreaLight**.<br /> <br />
