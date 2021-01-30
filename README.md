@@ -208,3 +208,10 @@ The **updateAreaLightPosition** function takes two parameter. The first paramete
 - After you add renderable object and different type of lights to the **RenderingSystem**, you may recompile and run the code again. Then you may press **"s"** key from keyboard to begin the process of rendering. After the process of rendering completed, you may press **"F4"** from keyboard to review the image that just been generated. 
 
 
+# Images
+- Now here is some image, which is rendered by this project.<br/><br/>
+
+- An image with table plane, Point light, AreaLight, and Spot Light.
+![myImage_3](https://user-images.githubusercontent.com/25276186/106352117-9090f400-6295-11eb-8850-508dc4f11a41.jpg) <br/><br/>
+- An image with wall plane, table plane, textrue, Point light, AreaLight, Spot Light, and Mirror reflection.
+![myImage](https://user-images.githubusercontent.com/25276186/106352178-cfbf4500-6295-11eb-8252-b31d7aee6e73.jpg)
