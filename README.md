@@ -128,14 +128,15 @@ A SpotLight is inherited from LightSource.**
 //       In this case, the value of the boolean parameter is true. 
 this->_ray_tracing_system->addLightSource(new AreaLight(glm::vec3(-15,5,0),glm::vec3(1,0,0),100.0f,-40.0f,ofColor::yellow,3.0f,3.0f,5),false,true);
 ```
-The first parameter in the constructor of **AreaLight** object: position of the **AreaLight**.<br />
-The second parameter in the constructor of **AreaLight** object: the outer normal of the **AreaLight**.<br /> 
-The thrid parameter in the constructor of **AreaLight** object: the intensity coefficient of **AreaLight**.<br />
-The fourth parameter in the constructor of **AreaLight** object: the rotation angle relative to axis, which is parallel to **AreaLight**.<br /> <br />
+Each parameter in the constructor of **AreaLight** object as following: <br />
+The first : position of the **AreaLight**.<br />
+The second : the outer normal of the **AreaLight**.<br /> 
+The thrid : the intensity coefficient of **AreaLight**.<br />
+The fourth : the rotation angle relative to axis, which is parallel to **AreaLight**.<br /> <br />
 (e.g) For instanc, if an **AreaLight** object has a outer normal (1,0,0), the illumination dirction of the **AreaLight** is to the positive x axis.<br />
       Then, rotation angle for this **AreaLight** is relatvie to positvie y axis. <br /><br />
-The fifth parameter in the constructor of **AreaLight** object: the color of the **AreaLight**.<br />
-The sixth parameter in the constructor of **AreaLight** object: the length of the **AreaLight**.<br />
-The seventh parameter in the constructor of **AreaLight** object: the width of the **AreaLight**. <br/>
-The last parameter in the constructor of **AreaLight** object: number of n by n **pointLight** has been integraled in **AreaLight**. <br/>
+The fifth : the color of the **AreaLight**.<br />
+The sixth : the length of the **AreaLight**.<br />
+The seventh : the width of the **AreaLight**. <br/>
+The last : number of n by n **pointLight** has been integraled in **AreaLight**. <br/>
 (e.g) if the value of the last parameter is 5, it means there are number of 5x5, which is 25, pointLight objects has been included in the **AreaLight** <br/><br/>
