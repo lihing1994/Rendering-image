@@ -89,7 +89,7 @@ The fourth parameter in the constructor of **MeshObj** object(optional): the spe
 <br /><br />
 
 # Explantion of addLightSource function in RayTracingSystem. 
-- The addLightSource function in the **RayTracingSystem** take three parameters, a pointer to one type of light, and two boolean vaule.The first parameter is mandatory while second and the thrid are optional.
+- The addLightSource function in the **RayTracingSystem** takes three parameters, a pointer to one type of light, and two boolean vaule. The first parameter is mandatory while second and the thrid are optional.
 The first parameters is a pointer to one of lightscoure object as following: 
 - LightSource, which is normal point light with 360 illumination angle.
 - SpotLight, which is inherited from LightSource, and it has limited illumination angle.
@@ -106,10 +106,11 @@ The thrid pf boolean parameter:
 ```
 this->_ray_tracing_system->addLightSource(new LightSource(glm::vec3(-16,23,-17),5.0f,ofColor::yellow));
 ```
-The first parameter of **LightSource** object: the position of **LightSource**.<br />
-The second parameter of **LightSource** object : the intensity of the **LightSource**.<br /> 
-The thrid parameter(optional) **LightSource** object: the color of the **LightSource**.<br />
-The fourth parameter(optional) **LightSource** object: the coefficient of Phong power of the **LightSource**.<br />
+Each parameter in the constructor of **LightSource** object as following:
+The first: the position of **LightSource**.<br />
+The second: the intensity of the **LightSource**.<br /> 
+The thrid: the color of the **LightSource**.<br />
+The fourth(optional): the coefficient of Phong power of the **LightSource**.<br />
 ![Screen Shot 2021-01-29 at 2 49 43 AM](https://user-images.githubusercontent.com/25276186/106265984-b27a7000-61dc-11eb-8289-9cc0025f6e3a.png)
 <br /><br />
 
@@ -119,11 +120,12 @@ The fourth parameter(optional) **LightSource** object: the coefficient of Phong 
 //       if the lightsource being added is a SpotLightSource object or not. 
 this->_ray_tracing_system->addLightSource(new SpotLightSource(glm::vec3(8,10,12),5.0f,15.0f,glm::vec3(-4,2,0),ofColor::white),true);
 ```
-The First parameter in the constructor of **SpotLight** object: position of the SpotLight.<br />
-The second parameter in the constructor of **SpotLight** object: the intensity of the **SpotLight**.<br /> 
-The thrid parameter in the constructor of **SpotLight** object: the illumination angle of **SpotLight**.<br />
-The fourth parameter in the constructor of **SpotLight** object: the direction vector that SpotLight is pointing to.<br />
-The fifth parameter in the constructor of **SpotLight** object(optional): the color of the **SpotLight**.<br />
+Each parameter in the constructor of **SpotLight** object as following:
+The First: position of the SpotLight.<br />
+The second: the intensity of the **SpotLight**.<br /> 
+The thrid: the illumination angle of **SpotLight**.<br />
+The fourth: the direction vector that SpotLight is pointing to.<br />
+The fifth(optional): the color of the **SpotLight**.<br />
 
 **Note: The last boolean parameter is standing for if the lightsource being added is a SpotLightSource object or not. 
 A SpotLight is inherited from LightSource.**
